@@ -106,7 +106,7 @@ export default function ProjectGallery({
       <dialog
         ref={dialogRef}
         aria-labelledby={titleId}
-        className="m-auto flex max-h-[calc(100dvh-2rem)] w-[min(92vw,1100px)] max-w-full flex-col overflow-auto border border-ink bg-paper p-4 text-ink backdrop:bg-ink/70"
+        className="m-auto hidden max-h-[calc(100dvh-2rem)] w-[min(92vw,1100px)] max-w-full flex-col overflow-auto border border-ink bg-paper p-4 text-ink open:flex backdrop:bg-ink/70"
         onClose={close}
         onCancel={(event) => {
           event.preventDefault();

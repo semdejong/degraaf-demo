@@ -364,6 +364,10 @@ a.inline-link:hover {
   }
 }
 
+dialog:not([open]) {
+  display: none;
+}
+
 dialog {
   margin: auto;
   max-width: min(92vw, 1100px);
