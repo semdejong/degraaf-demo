@@ -1,101 +1,122 @@
 /**
- * ÉÉN bestand om aan te passen per demo.
- * Kopieer de starter, vul hieronder de gegevens van de prospect in, klaar.
+ * De Graaf Hoveniers — seed voor de Sleads-demo.
+ * slug "degraaf-demo" is ook data-demo van de analytics-tracker. Niet wijzigen.
+ * Geen 60/100 jaar, geen verzonnen eigenaar, geen sterren, niets deployen.
  */
 export const content = {
-  // Slug = Vercel-project- en GitHub-reponaam (eindigt op "-demo"). Wordt door scripts/new-demo.sh gezet.
-  // Ook de "data-demo" voor de Sleads demo-analytics tracker.
   slug: "degraaf-demo",
 
   company: {
-    name: "Voorbeeldbedrijf",
-    tagline: "Vakmanschap uit de regio, sinds 1998",
+    name: "De Graaf Hoveniers",
+    tagline: "Groencreaties & Onderhoud",
     description:
-      "Wij helpen particulieren en bedrijven met betrouwbaar werk, eerlijk advies en een persoonlijke aanpak.",
-    logo: "/logo.png", // zet het logo in /public en pas het pad aan ("" = alleen tekst)
-    city: "Utrecht",
+      "Allround hoveniersbedrijf in Diepenheim voor advies, ontwerp, aanleg en onderhoud van tuinen en groenvoorziening — voor particulieren, bedrijven en overheid. Alles in één hand. Ervaring telt.",
+    logo: "/logo.png",
+    city: "Diepenheim",
   },
 
-  // Huisstijlkleuren van de prospect (hex)
   colors: {
-    primary: "#1d4ed8",
+    primary: "#6BCAC1",
     primaryForeground: "#ffffff",
-    accent: "#f59e0b",
-    background: "#ffffff",
-    foreground: "#0f172a",
-    muted: "#f1f5f9",
+    accent: "#BCDB54",
+    background: "#F4F5F1",
+    foreground: "#0C0B0C",
+    muted: "#E7ECE6",
+    ink: "#0C0B0C",
+    paper: "#F4F5F1",
+    vlak: "#E7ECE6",
+    teal: "#6BCAC1",
+    tealText: "#1A6E68",
+    lime: "#BCDB54",
+    bijenGoud: "#A47A17",
   },
 
   seo: {
-    title: "Voorbeeldbedrijf | Vakmanschap uit Utrecht",
-    description: "Conceptwebsite voor Voorbeeldbedrijf.",
+    title: "De Graaf Hoveniers | Groencreaties & Onderhoud in Diepenheim",
+    description:
+      "Conceptwebsite voor De Graaf Hoveniers in Diepenheim: advies, ontwerp, aanleg en onderhoud van tuinen en groenvoorziening. VHG-erkend, VCA-gecertificeerd.",
     lang: "nl",
   },
 
   nav: [
-    { label: "Diensten", href: "#diensten" },
-    { label: "Over ons", href: "#over-ons" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Contact", href: "#contact" },
+    { label: "Onze visie", href: "/onze-visie" },
+    { label: "Diensten", href: "/diensten" },
+    { label: "Projecten", href: "/projecten" },
+    { label: "Bijenhouderij", href: "/bijenhouderij" },
+    { label: "Stijl", href: "/stijl" },
+    { label: "Vacatures", href: "/vacatures" },
+    { label: "Contact", href: "/contact" },
   ],
 
   hero: {
-    title: "Vakwerk waar u op kunt bouwen",
+    title: "Ervaring telt",
     subtitle:
-      "Snel geregeld, duidelijk geprijsd en netjes opgeleverd. Vraag vandaag nog vrijblijvend een offerte aan.",
-    primaryCta: { label: "Offerte aanvragen", href: "#contact" },
-    secondaryCta: { label: "Bekijk onze diensten", href: "#diensten" },
-    image: "", // bv. "/hero.jpg" in /public of een externe URL; leeg = kleurverloop
-    highlights: ["25+ jaar ervaring", "Gratis advies aan huis", "Garantie op al ons werk"],
+      "Advies, ontwerp, aanleg en onderhoud van tuinen en groenvoorziening, vanuit Diepenheim. Voor particulieren, bedrijven en overheid — alles in één paar handen.",
+    primaryCta: { label: "Afspraak of offerte", href: "/offerte" },
+    secondaryCta: { label: "Bel 0547 351 354", href: "tel:+31547351354" },
+    image: "/img/headers/werk-waar-we-trots-op-zijn.jpg",
+    highlights: ["VHG-erkend", "VCA-gecertificeerd", "Alles in één hand"],
   },
 
   services: {
-    title: "Onze diensten",
-    intro: "Alles onder één dak, van eerste advies tot oplevering.",
+    title: "Ons vakmanschap voor particulier, bedrijven en overheid",
+    intro:
+      "Wij bieden u een totaalpakket aan diensten, van advisering en uitvoering bij onderhoudsvraagstukken voor gemeenten en instellingen tot en met het ontwerp, complete aanleg én onderhoud van tuinen voor zowel bedrijfsmatige als particuliere opdrachtgevers. Alles in één hand bovendien.",
     items: [
-      { icon: "🛠️", title: "Dienst één", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
-      { icon: "📐", title: "Dienst twee", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
-      { icon: "✅", title: "Dienst drie", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
+      { icon: "", title: "Particulier", text: "Advies, ontwerp, aanleg en onderhoud van uw tuin, met één vast aanspreekpunt en een vrijblijvende offerte.", href: "/particulier" },
+      { icon: "", title: "Bedrijven", text: "Een verzorgde bedrijfstuin als visitekaartje: nieuwe aanleg, renovatie of onderhoud op contract.", href: "/bedrijven" },
+      { icon: "", title: "Overheid", text: "Aanleg en beheer van groene buitenruimtes, met aandacht voor kwaliteit, functionaliteit en kostenbeheersing.", href: "/overheid" },
+      { icon: "", title: "Ontwerp", text: "Eigen ontwerpen en realisatie, ook in opdracht van tuin- en landschapsarchitecten. Vrijblijvend advies, transparante offerte.", href: "/ontwerp" },
     ],
   },
 
   about: {
-    title: "Over ons",
+    title: "Onze visie",
     text: [
-      "Wat begon als een klein familiebedrijf is uitgegroeid tot een vertrouwd adres in de regio.",
-      "We werken met vaste vakmensen, houden ons aan afspraken en staan ook na de oplevering voor u klaar.",
+      "Groen is onmisbaar in een optimaal leef- en woonklimaat. Voor een juiste inrichting of beheer is kennis van zaken en ervaring nodig — kennis en ervaring die de ontwerpers en hoveniers van De Graaf Hoveniers u vanuit Diepenheim, gemeente Hof van Twente, leveren. Ervaring telt.",
+      "En dat bewijzen we al jarenlang door onze vhg-erkenning. Een zekerheid die staat voor betrokkenheid, passie en vakmanschap. Bovendien zijn wij vca-gecertificeerd.",
+      "Twentse degelijkheid en nuchterheid gaan bij ons hand in hand met een vriendelijke en duidelijke «afspraak is afspraak».",
     ],
-    image: "", // optioneel
+    image: "/img/headers/header-2.jpg",
     stats: [
-      { value: "25+", label: "jaar ervaring" },
-      { value: "1.200+", label: "tevreden klanten" },
-      { value: "9,2", label: "gemiddeld cijfer" },
+      { value: "VHG", label: "erkend lid" },
+      { value: "VCA", label: "gecertificeerd" },
+      { value: "Eén", label: "vast aanspreekpunt" },
     ],
   },
 
   reviews: {
-    title: "Wat klanten zeggen",
-    items: [
-      { name: "Familie Jansen", text: "Netjes en snel gewerkt, precies volgens afspraak. Echt een aanrader!", rating: 5 },
-      { name: "Petra de Vries", text: "Duidelijke communicatie en een eerlijke prijs. We komen zeker terug.", rating: 5 },
-      { name: "Mark Bakker", text: "Vakkundig advies en mooi resultaat. Heel tevreden.", rating: 5 },
-    ],
+    title: "",
+    items: [] as { name: string; text: string; rating: number }[],
   },
 
   contact: {
-    title: "Neem contact op",
-    text: "Bel, mail of kom langs. We reageren binnen één werkdag.",
-    phone: "030 123 45 67",
-    email: "info@voorbeeldbedrijf.nl",
-    address: "Voorbeeldstraat 1, 1234 AB Utrecht",
-    openingHours: ["Ma t/m vr: 08:00 – 17:30", "Za: 09:00 – 13:00"],
-    whatsapp: "", // bv. "31612345678" (zonder +)
-    cta: { label: "Bel direct", href: "tel:0301234567" },
+    title: "Contact opnemen",
+    text: "Wilt u meer over ons weten, of wilt u een persoonlijk gesprek of een offerte? Bel, mail, of vraag een afspraak aan via uw eigen mailprogramma. Alle verstrekte gegevens beschouwen wij als strikt vertrouwelijk.",
+    phone: "0547 351 354",
+    phoneE164: "+31547351354",
+    email: "info@tdegraaf.nl",
+    address: "Oude Sluisweg 5, 7478 RJ Diepenheim",
+    openingHours: [] as string[],
+    whatsapp: "",
+    cta: { label: "Bel 0547 351 354", href: "tel:+31547351354" },
+    maps:
+      "https://www.google.nl/maps/place/T.+de+Graaf+Tuincentrum+B.V./@52.1818138,6.5584353,15z",
+    route: [
+      "Ons bedrijf is te vinden net buiten de bebouwde kom van het kunst- en kastelenstadje Diepenheim.",
+      "Vanuit Diepenheim richting Neede en Haaksbergen: u rijdt Diepenheim uit richting Neede, neemt de 1e weg rechts, de Reeenkampweg, en rijdt deze helemaal uit. Aan het eind van deze weg ziet u links-voor ons bedrijf.",
+      "Vanuit Neede en Haaksbergen richting Diepenheim: ga direct na de Schipbeek (over de brug) links. Deze weg gaat over in een viersprong. Hier neemt u de afslag Oude Sluisweg. Vervolgens vindt u ons aan de linkerzijde.",
+    ],
   },
 
   footer: {
-    kvk: "", // bv. "KvK 12345678"
-    socials: [] as { label: string; href: string }[],
+    kvk: "KvK 06034865",
+    socials: [
+      {
+        label: "Foto's op Facebook",
+        href: "https://www.facebook.com/pg/De-Graaf-Hoveniers-399224220113655/photos/",
+      },
+    ] as { label: string; href: string }[],
   },
 };
 
