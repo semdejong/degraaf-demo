@@ -3,6 +3,7 @@ import Waterline from "@/components/Waterline";
 
 type Props = {
   title: string;
+  kicker?: string;
   lede?: string;
   image?: string;
   imageAlt?: string;
@@ -11,11 +12,12 @@ type Props = {
   tone?: "lime" | "goud";
 };
 
-export default function PageIntro({ title, lede, image, imageAlt, imageWidth, imageHeight, tone = "lime" }: Props) {
+export default function PageIntro({ title, kicker, lede, image, imageAlt, imageWidth, imageHeight, tone = "lime" }: Props) {
   return (
     <header>
       <div className="mx-auto max-w-[72rem] px-5 pt-12 pb-8 md:px-8 md:pt-16">
-        <h1 className="max-w-[16ch] font-display text-[clamp(2.7rem,7vw,5rem)] text-ink">{title}</h1>
+        {kicker ? <p className="font-mono text-[0.95rem]">{kicker}</p> : null}
+        <h1 className="mt-3 max-w-[16ch] font-display text-[clamp(2.7rem,7vw,5rem)] text-ink">{title}</h1>
         {lede ? <p className="mt-6 max-w-2xl text-[1.125rem] leading-[1.65]">{lede}</p> : null}
       </div>
       {image && imageAlt && imageWidth && imageHeight ? (

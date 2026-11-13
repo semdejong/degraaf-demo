@@ -103,6 +103,46 @@ export const content = {
     highlights: ["VHG-erkend", "VCA-gecertificeerd", "Alles in één hand"],
   },
 
+  rhythm: {
+    title: "Alles in één paar handen",
+    lede: "Advies, ontwerp, aanleg en onderhoud lopen bij ons in elkaar over. Hetzelfde aanspreekpunt, van het eerste gesprek tot het groen dat daarna bijgehouden wordt.",
+    steps: [
+      {
+        code: "01",
+        title: "Advies",
+        level: "28%",
+        short: "Een oriënterend gesprek bij ons of bij u, vrijblijvend.",
+        text: "Wij heten u welkom aan de Oude Sluisweg, of komen bij u langs. De koffie staat klaar, thee mag ook. U krijgt de ruimte om wensen, eisen en budget te noemen. Het advies en de offerte daarna zijn vrijblijvend.",
+      },
+      {
+        code: "02",
+        title: "Ontwerp",
+        level: "48%",
+        short: "Een tuin op maat, desgewenst met beplantingsplan.",
+        text: "Het ontwerp volgt het huis, de omgeving en het budget. Helder, met een evenwichtige verdeling van de ruimte. Wilt u een beplantingsplan, dan hoort daar een namenlijst bij en een indruk van vorm, kleur en geur. Wij ontwerpen zelf, en realiseren ook tekeningen van tuin- en landschapsarchitecten.",
+      },
+      {
+        code: "03",
+        title: "Aanleg",
+        level: "70%",
+        short: "Van schets tot tuin of dakterras, nieuw of gerenoveerd.",
+        text: "Wij verzorgen het hele proces: van het eerste schetsontwerp tot de complete realisatie. Dat kan een nieuwe tuin zijn, een dakterras, of de renovatie van wat er al ligt. Beplanting, bestrating en water komen erin waar het ontwerp daarom vraagt.",
+      },
+      {
+        code: "04",
+        title: "Onderhoud",
+        level: "90%",
+        short: "Het hele jaar op contract, of een afgesproken periode.",
+        text: "Met een onderhoudscontract blijft het groen het jaar rond verzorgd. Het kan ook korter: een vooraf vastgestelde periode. Eén vast aanspreekpunt, en een vriendelijke, duidelijke afspraak is afspraak.",
+      },
+    ],
+  },
+
+  close: {
+    title: "Een gesprek of een offerte",
+    text: "Bel, of open een bericht in uw eigen mailprogramma. Vanaf deze conceptsite wordt niets automatisch verstuurd. Het advies en de offerte zijn vrijblijvend.",
+  },
+
   services: {
     title: "Ons vakmanschap voor particulier, bedrijven en overheid",
     intro:
@@ -245,6 +285,21 @@ export const content = {
     skip: "Naar inhoud",
     concept:
       "Dit is een concept; uw eigen mailprogramma opent met het bericht. Er wordt niets automatisch verstuurd.",
+    kickers: {
+      visie: "Ervaring telt",
+      diensten: "Alles in één hand",
+      particulier: "Uw tuin",
+      bedrijven: "Visitekaartje",
+      overheid: "Openbare ruimte",
+      ontwerp: "Op maat",
+      projecten: "Werk waar we trots op zijn",
+      bijen: "Bevruchting",
+      stijl: "Zes stijlen",
+      vacatures: "Diepenheim",
+      contact: "Oude Sluisweg",
+      offerte: "Vrijblijvend",
+      privacy: "Uw gegevens",
+    },
     opened:
       "Uw mailprogramma zou nu moeten openen met het bericht. Er is niets automatisch verstuurd.",
     privacyRequired: "Vink de privacyverklaring aan om verder te gaan.",
@@ -261,6 +316,7 @@ export const content = {
       {
         id: "particulier",
         title: "Particulier",
+        lede: "Tuinen bij woonhuizen. Geen projectnaam of plaats bij deze foto’s.",
         href: "/particulier",
         photos: [
           ["particulier-1516894241.jpg", true],
@@ -285,6 +341,7 @@ export const content = {
       {
         id: "bedrijven",
         title: "Bedrijven",
+        lede: "Groen rond kantoren en bedrijfsruimten.",
         href: "/bedrijven",
         photos: [
           photo(
@@ -307,6 +364,7 @@ export const content = {
       {
         id: "overheid",
         title: "Overheid",
+        lede: "Openbaar groen en het beheer van buitenruimte.",
         href: "/overheid",
         photos: [
           "overheid-1516895481.jpg",
@@ -331,6 +389,7 @@ export const content = {
       {
         id: "ontwerp",
         title: "Ontwerp",
+        lede: "Ontwerptekeningen en een foto uit het eigen werk.",
         href: "/ontwerp",
         photos: [
           photo(
@@ -492,6 +551,21 @@ export const content = {
           type: "p",
           text: "De Graaf Hoveniers staat garant voor kwaliteit: ervaring telt. Dat bewijzen we al jaren door onze VHG-erkenning, een zekerheid die staat voor betrokkenheid, passie en vakmanschap. Daarnaast zijn wij VCA-gecertificeerd.",
         },
+        { type: "h2", text: "Handig voor het gesprek" },
+        {
+          type: "p",
+          text: "U hoeft niets voor te bereiden. Het helpt wel als u alvast weet wat u belangrijk vindt. Dezelfde punten nemen wij mee in het ontwerp:",
+        },
+        {
+          type: "ul",
+          items: [
+            "hoe u de tuin wilt gebruiken: zitten, spelen, eten, opbergen",
+            "de stijl die bij het huis past, of een mengeling",
+            "hoeveel onderhoud u zelf wilt doen",
+            "of verlichting, water of een dakterras meedoet",
+            "het budget waar de offerte binnen moet blijven",
+          ],
+        },
       ] as Block[],
     },
 
@@ -527,6 +601,22 @@ export const content = {
           type: "p",
           text: "Wij bieden u een totaalpakket: van advisering en uitvoering bij onderhoudsvraagstukken voor gemeenten en instellingen tot en met de complete aanleg én het onderhoud van bedrijfstuinen en andere groenvoorzieningen. Voor het groen van gemeenten en openbare ruimte verwijzen wij u ook naar de pagina Overheid.",
         },
+        { type: "h2", text: "Voor wie" },
+        {
+          type: "p",
+          text: "De opdrachtgevers in de bedrijfsmatige markt zijn onder meer:",
+        },
+        {
+          type: "ul",
+          items: [
+            "facilitaire diensten en instellingen",
+            "woningstichtingen en verenigingen van eigenaren",
+            "ziekenhuizen",
+            "architectenbureaus en bouwondernemingen",
+            "makelaars en projectontwikkelaars",
+            "gemeenten en parkbeheer",
+          ],
+        },
       ] as Block[],
     },
 
@@ -552,8 +642,17 @@ export const content = {
           text: "Kwaliteit, functionaliteit en kostenbeheersing zijn belangrijke kernpunten bij de aanleg en het beheer van buitenruimtes. Niet alleen wat betreft beheer en onderhoud, maar ook op planmatig en aanlegniveau is De Graaf uw ervaren en ter zake kundige partner. Wij adviseren u graag over uw mogelijkheden.",
         },
         {
+          type: "ul",
+          items: [
+            "aanleg van groene buitenruimtes, van plan tot uitvoering",
+            "beheer en onderhoud, kort of in een meerjarig contract",
+            "advies aan facilitaire diensten over efficiëntie en kosten",
+            "één aanspreekpunt voor de hele opdracht",
+          ],
+        },
+        {
           type: "p",
-          text: "De Graaf Hoveniers is VHG-erkend en VCA-gecertificeerd. Afspraak is afspraak: een heldere opdracht, één aanspreekpunt en uitvoering waar u op kunt rekenen.",
+          text: "De Graaf Hoveniers is VHG-erkend en VCA-gecertificeerd. Afspraak is afspraak: een heldere opdracht, één aanspreekpunt en uitvoering waar u op kunt rekenen. Het groen van een gemeente of bedrijventerrein vraagt dezelfde zorg als een tuin, alleen het peil ligt anders: beeld, gebruik en kosten tegelijk.",
         },
       ] as Block[],
     },
@@ -585,7 +684,18 @@ export const content = {
         },
         {
           type: "p",
-          text: "Hieronder staan ontwerptekeningen en een foto uit het eigen werk. Het zijn voorbeelden, zonder projectnaam of plaatsaanduiding.",
+          text: "Hieronder staan ontwerptekeningen en een foto uit het eigen werk. Het zijn voorbeelden, zonder projectnaam of plaatsaanduiding. De tekeningen blijven tekeningen: ze zijn het werk, niet de vormgeving van deze site.",
+        },
+        { type: "h2", text: "Wat u ontvangt" },
+        {
+          type: "ul",
+          items: [
+            "een oriënterend gesprek, bij ons of bij u",
+            "een ontwerp dat tuin, woonhuis en omgeving met elkaar verbindt",
+            "desgewenst een beplantingsplan met namenlijst",
+            "een vrijblijvende offerte met een gespecificeerd kostenoverzicht",
+            "tijdens de aanleg steeds dezelfde contactpersoon",
+          ],
         },
       ] as Block[],
     },
@@ -606,6 +716,10 @@ export const content = {
         {
           type: "p",
           text: "Bent u geïnteresseerd in de bijenhouderij? Kijk dan ook op de website van de Nederlandse Bijenhouders Vereniging.",
+        },
+        {
+          type: "p",
+          text: "De bijen horen bij het bedrijf, net buiten de bebouwde kom van Diepenheim. De foto’s staan hier op de grootte van het bestand, niet opgeblazen tot een vlak. Het zijn beelden van de bijenhouderij, zonder verdere benaming.",
         },
       ] as Block[],
       association: {
@@ -826,6 +940,8 @@ export const content = {
       openTitle: "Open sollicitatie",
       open: "Je kunt ons altijd per mail een open sollicitatie sturen. Vertel ons wat jij bij ons wilt gaan doen en motiveer waarom wij jou nodig hebben. Wij staan altijd open voor een gesprek.",
       subject: "Sollicitatie hovenier met passie",
+      placeNote:
+        "Je werkt vanuit Diepenheim, aan de Oude Sluisweg, in de gemeente Hof van Twente. Het werk wisselt: particuliere tuinen, bedrijventerreinen en openbaar groen, van advies tot onderhoud.",
     },
 
     offerte: {
@@ -833,6 +949,24 @@ export const content = {
       description:
         "Vraag een afspraak of offerte aan bij De Graaf Hoveniers. Uw mailprogramma opent met het bericht; er wordt niets automatisch verstuurd.",
       subject: "Afspraak of offerte via website",
+      lede: "Goedendag. Vertel kort waar het over gaat. Daarna opent uw mailprogramma; u verstuurt het bericht zelf. Wij bellen of mailen terug voor een oriënterend gesprek.",
+      steps: [
+        {
+          code: "01",
+          title: "Uw bericht",
+          text: "Het formulier zet een leesbare samenvatting klaar. Er gaat niets naar een server.",
+        },
+        {
+          code: "02",
+          title: "Het gesprek",
+          text: "Bij ons aan de Oude Sluisweg, of bij u thuis. Koffie of thee, en de ruimte voor uw wensen.",
+        },
+        {
+          code: "03",
+          title: "De offerte",
+          text: "Duidelijk en vrijblijvend. Bij ontwerp en aanleg met een gespecificeerd kostenoverzicht.",
+        },
+      ],
       topics: [
         { value: "particulier", label: "Particulier" },
         { value: "bedrijven", label: "Bedrijven" },

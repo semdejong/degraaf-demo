@@ -3,6 +3,7 @@ import Link from "next/link";
 import { content } from "@/content";
 import Blocks from "@/components/Blocks";
 import Examples from "@/components/Examples";
+import PageClose from "@/components/PageClose";
 import PageIntro from "@/components/PageIntro";
 
 const page = content.pages.bedrijven;
@@ -17,6 +18,7 @@ export default function BedrijvenPage() {
   return (
     <>
       <PageIntro
+        kicker={content.ui.kickers.bedrijven}
         title={page.title}
         image={page.image}
         imageAlt={page.imageAlt}
@@ -32,6 +34,7 @@ export default function BedrijvenPage() {
         </p>
       </div>
       {group ? <Examples id={group.id} title={content.ui.examples} photos={group.photos} /> : null}
+      <PageClose />
     </>
   );
 }

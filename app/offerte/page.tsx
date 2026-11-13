@@ -14,11 +14,17 @@ export const metadata: Metadata = {
 export default function OffertePage() {
   return (
     <>
-      <PageIntro
-        title={page.title}
-        lede="Goedendag. Vertel kort waar het over gaat. Wij bellen of mailen u terug. U kunt ook direct bellen."
-      />
-      <div className="mx-auto max-w-3xl px-5 py-14 md:px-8 md:py-16">
+      <PageIntro kicker={content.ui.kickers.offerte} title={page.title} lede={page.lede} />
+      <div className="mx-auto grid max-w-[76rem] gap-12 px-5 py-14 md:px-8 md:py-16 lg:grid-cols-[18rem_minmax(0,1fr)]">
+        <ol className="flex flex-col gap-6">
+          {page.steps.map((step) => (
+            <li key={step.code} className="border-t-[3px] border-lime pt-3">
+              <p className="font-mono text-[0.95rem]">{step.code}</p>
+              <h2 className="mt-1 font-display text-2xl">{step.title}</h2>
+              <p className="mt-2 text-[1.0625rem]">{step.text}</p>
+            </li>
+          ))}
+        </ol>
         <ConceptForm
           email={contact.email}
           subject={page.subject}

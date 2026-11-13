@@ -16,6 +16,7 @@ export default function VacaturesPage() {
   return (
     <>
       <PageIntro
+        kicker={content.ui.kickers.vacatures}
         title={page.title}
         lede={page.intro}
         image={page.image}
@@ -26,6 +27,7 @@ export default function VacaturesPage() {
       <div className="mx-auto grid max-w-[76rem] gap-12 px-5 py-14 md:px-8 md:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]">
         <div>
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)]">{page.role}</h2>
+          <p className="mt-4">{page.placeNote}</p>
           <h3 className="mt-8 font-display text-2xl">{page.youAre}</h3>
           <ul className="peil-list mt-3">
             {page.requirements.map((item) => (

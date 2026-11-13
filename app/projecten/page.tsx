@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { content } from "@/content";
+import PageClose from "@/components/PageClose";
 import PageIntro from "@/components/PageIntro";
 import ProjectGallery from "@/components/ProjectGallery";
 
@@ -16,6 +17,7 @@ export default function ProjectenPage() {
   return (
     <>
       <PageIntro
+        kicker={content.ui.kickers.projecten}
         title={page.title}
         lede={page.lede}
         image={content.hero.image}
@@ -24,10 +26,24 @@ export default function ProjectenPage() {
         imageHeight={content.hero.imageHeight}
       />
       <div className="mx-auto max-w-[76rem] px-5 py-14 md:px-8 md:py-16">
+        <nav aria-label="Onderdelen van de galerij">
+          <ol className="grid border border-ink sm:grid-cols-2 lg:grid-cols-4">
+            {page.groups.map((group) => (
+              <li key={group.id} className="border-b border-ink last:border-b-0 sm:border-r sm:last:border-r-0 lg:border-b-0">
+                <a href={`#${group.id}`} className="block min-h-11 px-4 py-4">
+                  <span className="block font-display text-3xl">{group.title}</span>
+                  <span className="mt-1 block text-[1rem] leading-snug">{group.lede}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+        <div className="mt-12">
         <ProjectGallery
           groups={page.groups}
           labels={{ enlarge: ui.enlarge, previous: ui.previous, next: ui.next, close: ui.close }}
         />
+        </div>
         <p className="mt-12 max-w-2xl">
           <Link href="/bijenhouderij" className="inline-link">
             {pages.bijen.title}
@@ -41,6 +57,7 @@ export default function ProjectenPage() {
           </a>
         </p>
       </div>
+      <PageClose />
     </>
   );
 }

@@ -6,6 +6,7 @@ import type { Photo } from "@/content";
 type Group = {
   id: string;
   title: string;
+  lede?: string;
   photos: Photo[];
 };
 
@@ -70,6 +71,7 @@ export default function ProjectGallery({
           <h2 id={`groep-${group.id}`} className="font-display text-[clamp(1.8rem,3vw,2.6rem)]">
             {group.title}
           </h2>
+          {group.lede ? <p className="mt-2 max-w-xl">{group.lede}</p> : null}
           <ul className="mt-6 grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {group.photos.map((item, index) => (
               <li key={item.src}>

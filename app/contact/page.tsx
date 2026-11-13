@@ -16,6 +16,7 @@ export default function ContactPage() {
   return (
     <>
       <PageIntro
+        kicker={content.ui.kickers.contact}
         title={contact.title}
         lede={contact.text}
         image={contact.image}
@@ -41,6 +42,9 @@ export default function ContactPage() {
             </a>
           </p>
           <p className="mt-3 font-mono text-[0.95rem]">KvK {contact.kvk}</p>
+          <p className="mt-6 max-w-md border-l-[3px] border-lime pl-4">
+            Liever langskomen? Het bedrijf ligt net buiten de bebouwde kom. De koffie staat klaar — of de thee.
+          </p>
           <h2 className="mt-10 font-display text-3xl">Route</h2>
           <div className="mt-4">
             <RouteBlock />

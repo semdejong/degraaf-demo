@@ -5,6 +5,7 @@ import HonestImage from "@/components/HonestImage";
 import Keurmerken from "@/components/Keurmerken";
 import Peilschaal from "@/components/Peilschaal";
 import PhoneLink from "@/components/PhoneLink";
+import Rhythm from "@/components/Rhythm";
 import RouteBlock from "@/components/RouteBlock";
 import Waterline from "@/components/Waterline";
 
@@ -79,6 +80,8 @@ export default function Home() {
         </div>
       </section>
 
+      <Rhythm variant="row" />
+
       <Chambers />
 
       <section className="border-t border-ink">
@@ -119,7 +122,7 @@ export default function Home() {
             </p>
           </div>
           <ul className="grid grid-cols-3 gap-3">
-            {pages.stijl.styles.slice(0, 3).map((style) => (
+            {pages.stijl.styles.map((style) => (
               <li key={style.name}>
                 <HonestImage src={style.src} alt={style.alt} width={style.width} height={style.height} />
                 <p className="mt-1 font-mono text-[0.85rem]">{style.name}</p>

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { content } from "@/content";
 import Blocks from "@/components/Blocks";
-import PageIntro from "@/components/PageIntro";
 import Keurmerken from "@/components/Keurmerken";
+import PageClose from "@/components/PageClose";
+import PageIntro from "@/components/PageIntro";
 
 const page = content.pages.visie;
 
@@ -15,6 +16,7 @@ export default function VisiePage() {
   return (
     <>
       <PageIntro
+        kicker={content.ui.kickers.visie}
         title={page.title}
         lede={content.about.lede}
         image={page.image}
@@ -28,6 +30,7 @@ export default function VisiePage() {
           <Keurmerken />
         </div>
       </div>
+      <PageClose />
     </>
   );
 }

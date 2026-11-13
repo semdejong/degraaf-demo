@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { content } from "@/content";
 import Chambers from "@/components/Chambers";
 import Keurmerken from "@/components/Keurmerken";
+import PageClose from "@/components/PageClose";
 import PageIntro from "@/components/PageIntro";
+import Rhythm from "@/components/Rhythm";
 
 const page = content.pages.diensten;
 
@@ -15,6 +17,7 @@ export default function DienstenPage() {
   return (
     <>
       <PageIntro
+        kicker={content.ui.kickers.diensten}
         title={page.title}
         lede={content.services.intro}
         image={page.image}
@@ -22,6 +25,7 @@ export default function DienstenPage() {
         imageWidth={page.imageWidth}
         imageHeight={page.imageHeight}
       />
+      <Rhythm />
       <Chambers intro={false} />
       <div className="mx-auto max-w-[76rem] px-5 py-14 md:px-8">
         <p className="max-w-2xl">{content.services.promise}</p>
@@ -29,6 +33,7 @@ export default function DienstenPage() {
           <Keurmerken />
         </div>
       </div>
+      <PageClose />
     </>
   );
 }
