@@ -84,15 +84,17 @@ export default function ProjectGallery({
                     setCurrent({ group: groupIndex, index });
                   }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    width={item.width}
-                    height={item.height}
-                    className="h-auto w-full"
-                    style={{ maxWidth: item.width }}
-                  />
+                  <span className="flex h-56 items-center justify-center bg-vlak sm:h-64">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      width={item.width}
+                      height={item.height}
+                      className="max-h-full w-auto max-w-full object-contain"
+                      style={{ maxWidth: item.width }}
+                    />
+                  </span>
                   <span className="mt-2 block font-mono text-[0.95rem]">{item.caption}</span>
                 </button>
               </li>
@@ -104,7 +106,7 @@ export default function ProjectGallery({
       <dialog
         ref={dialogRef}
         aria-labelledby={titleId}
-        className="m-auto w-[min(92vw,1100px)] max-w-full border border-ink bg-paper p-4 text-ink backdrop:bg-ink/70"
+        className="m-auto flex max-h-[calc(100dvh-2rem)] w-[min(92vw,1100px)] max-w-full flex-col overflow-auto border border-ink bg-paper p-4 text-ink backdrop:bg-ink/70"
         onClose={close}
         onCancel={(event) => {
           event.preventDefault();
@@ -128,11 +130,11 @@ export default function ProjectGallery({
                 alt={active.alt}
                 width={active.width}
                 height={active.height}
-                className="mx-auto h-auto max-h-[75vh] w-auto max-w-full"
+                className="mx-auto h-auto max-h-[62vh] w-auto max-w-full"
                 style={{ maxWidth: active.width }}
               />
             </div>
-            <div className="mt-3 flex gap-2">
+            <div className="mt-3 flex gap-2 bg-paper">
               <button type="button" className="btn btn-line" onClick={() => step(-1)} disabled={current?.index === 0}>
                 {labels.previous}
               </button>

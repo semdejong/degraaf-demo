@@ -1,4 +1,5 @@
 import type { Block } from "@/content";
+import { slugify } from "@/lib/slug";
 
 export default function Blocks({ blocks, narrow = true }: { blocks: Block[]; narrow?: boolean }) {
   return (
@@ -6,7 +7,11 @@ export default function Blocks({ blocks, narrow = true }: { blocks: Block[]; nar
       {blocks.map((block, index) => {
         if (block.type === "h2") {
           return (
-            <h2 key={index} className="mt-6 font-display text-[clamp(1.8rem,3vw,2.5rem)] text-ink">
+            <h2
+              key={index}
+              id={slugify(block.text)}
+              className="mt-6 scroll-mt-28 font-display text-[clamp(1.8rem,3vw,2.5rem)] text-ink"
+            >
               {block.text}
             </h2>
           );

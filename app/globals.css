@@ -28,6 +28,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+  scroll-padding-bottom: 9rem;
   background: var(--paper);
 }
 
@@ -140,6 +142,15 @@ a.inline-link:hover {
 .btn-wit:hover {
   box-shadow: inset 0 -3px 0 var(--lime);
 }
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+}
+
+.site-header {
+  background-color: var(--paper);
 }
 
 .waterline {
@@ -147,6 +158,7 @@ a.inline-link:hover {
   height: 10px;
   width: 100%;
   overflow: hidden;
+  background-color: var(--paper);
   background-image: repeating-linear-gradient(
     to right,
     var(--ink) 0 2px,
@@ -229,7 +241,7 @@ a.inline-link:hover {
 .peil-label {
   position: relative;
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1.3;
@@ -350,6 +362,21 @@ a.inline-link:hover {
   to {
     transform: scaleX(1);
   }
+}
+
+dialog {
+  margin: auto;
+  max-width: min(92vw, 1100px);
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 1rem;
+}
+
+dialog::backdrop {
+  background: rgb(12 11 12 / 0.72);
 }
 
 @media (prefers-reduced-motion: no-preference) {

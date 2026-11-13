@@ -47,7 +47,7 @@ export default function Header({
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 bg-paper">
+    <header className="site-header sticky top-0 z-50 bg-paper">
       <div className="flex h-[68px] items-center gap-3 px-4 md:gap-4 md:px-6">
         <Link href="/" aria-current={pathname === "/" ? "page" : undefined} className="shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}

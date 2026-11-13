@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { content } from "@/content";
 import Blocks from "@/components/Blocks";
 import PageIntro from "@/components/PageIntro";
+import { slugify } from "@/lib/slug";
 
 const page = content.pages.privacy;
 
@@ -20,8 +21,10 @@ export default function PrivacyPage() {
             {page.blocks
               .filter((block) => block.type === "h2")
               .map((block) => (
-                <li key={block.text} className="border-b border-ink py-2 font-mono text-[0.95rem]">
-                  {block.text}
+                <li key={block.text} className="border-b border-ink">
+                  <a href={`#${slugify(block.text)}`} className="inline-link flex min-h-11 items-center font-mono text-[0.95rem]">
+                    {block.text}
+                  </a>
                 </li>
               ))}
           </ol>

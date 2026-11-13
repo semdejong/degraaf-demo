@@ -29,10 +29,10 @@ export default function Chambers({ intro = true }: { intro?: boolean }) {
               <div className="chamber-col md:min-h-full" style={{ ["--peil" as string]: item.level }}>
                 <div className="chamber-water" />
               </div>
-              <div className="grid gap-6 px-5 py-8 md:grid-cols-[minmax(0,1fr)_220px] md:items-center md:px-8 md:py-10">
-                <div>
+              <div className="flex flex-col gap-6 px-5 py-8 md:flex-row md:items-center md:gap-10 md:px-8 md:py-10">
+                <div className="max-w-xl">
                   <h3 className="font-display text-[clamp(1.8rem,3vw,2.6rem)]">{item.title}</h3>
-                  <p className="mt-3 max-w-xl text-[1.0625rem] leading-relaxed">{item.text}</p>
+                  <p className="mt-3 text-[1.0625rem] leading-relaxed">{item.text}</p>
                   <span className="mt-4 inline-block text-link underline decoration-1 underline-offset-[3px]">
                     {ui.readMore}
                   </span>
@@ -42,7 +42,7 @@ export default function Chambers({ intro = true }: { intro?: boolean }) {
                   alt={item.imageAlt}
                   width={item.imageWidth}
                   height={item.imageHeight}
-                  className="!w-auto justify-self-start"
+                  className="!w-auto shrink-0"
                 />
               </div>
             </Link>

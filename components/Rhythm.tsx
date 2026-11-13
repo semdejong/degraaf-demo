@@ -14,8 +14,8 @@ export default function Rhythm({ variant = "stack" }: { variant?: "stack" | "row
         </div>
         <ol className="mx-auto mt-10 grid max-w-[76rem] border-t border-ink md:grid-cols-4">
           {rhythm.steps.map((step) => (
-            <li key={step.code} className="grid grid-cols-[12px_minmax(0,1fr)] border-b border-ink md:border-r md:border-b-0 md:last:border-r-0">
-              <div className="relative min-h-52 bg-vlak">
+            <li key={step.code} className="grid grid-cols-[2rem_minmax(0,1fr)] border-b border-ink last:border-b-0 md:border-r md:border-b-0 md:last:border-r-0">
+              <div className="relative min-h-56 bg-vlak" aria-hidden="true">
                 <div className="chamber-water" style={{ height: step.level }} />
               </div>
               <div className="px-5 py-6 md:px-6">
@@ -45,13 +45,13 @@ export default function Rhythm({ variant = "stack" }: { variant?: "stack" | "row
       </div>
       <ol>
         {rhythm.steps.map((step) => (
-          <li key={step.code} className="grid border-t border-ink md:grid-cols-[9rem_minmax(0,1fr)]">
-            <div className="relative min-h-24 bg-vlak">
+          <li key={step.code} className="grid border-t border-ink md:grid-cols-[4.5rem_minmax(0,1fr)]">
+            <div className="relative min-h-28 bg-vlak" aria-hidden="true">
               <div className="chamber-water" style={{ height: step.level }} />
-              <p className="relative px-5 py-6 font-mono text-[0.95rem] md:px-6">{step.code}</p>
             </div>
             <div className="px-5 py-8 md:px-10 md:py-10">
-              <h3 className="font-display text-[clamp(1.8rem,3vw,2.7rem)]">{step.title}</h3>
+              <p className="font-mono text-[0.95rem]">{step.code}</p>
+              <h3 className="mt-2 font-display text-[clamp(1.8rem,3vw,2.7rem)]">{step.title}</h3>
               <p className="mt-3 max-w-2xl">{step.text}</p>
             </div>
           </li>

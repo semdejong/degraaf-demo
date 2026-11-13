@@ -60,7 +60,7 @@ export default function Home() {
         </figure>
       </section>
 
-      <section className="border-t border-ink">
+      <section>
         <Waterline />
         <div className="mx-auto grid max-w-[76rem] gap-8 px-5 py-16 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-end md:px-8 md:py-24">
           <div>
@@ -125,7 +125,7 @@ export default function Home() {
             {pages.stijl.styles.map((style) => (
               <li key={style.name}>
                 <HonestImage src={style.src} alt={style.alt} width={style.width} height={style.height} />
-                <p className="mt-1 font-mono text-[0.85rem]">{style.name}</p>
+                <p className="mt-1 font-mono text-[0.95rem]">{style.name}</p>
               </li>
             ))}
           </ul>

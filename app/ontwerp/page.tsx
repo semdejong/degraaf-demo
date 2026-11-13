@@ -4,6 +4,7 @@ import Blocks from "@/components/Blocks";
 import Examples from "@/components/Examples";
 import PageClose from "@/components/PageClose";
 import PageIntro from "@/components/PageIntro";
+import WithStaff from "@/components/WithStaff";
 
 const page = content.pages.ontwerp;
 const group = content.projects.groups.find((item) => item.id === "ontwerp");
@@ -21,9 +22,9 @@ export default function OntwerpPage() {
         title={page.title}
         lede="Eigen ontwerpen en realisatie, ook voor tuin- en landschapsarchitecten. Eén aanspreekpunt, een vrijblijvend advies en een gespecificeerde offerte."
       />
-      <div className="mx-auto max-w-[76rem] px-5 py-14 md:px-8 md:py-16">
+      <WithStaff>
         <Blocks blocks={page.blocks} />
-      </div>
+      </WithStaff>
       {group ? <Examples id={group.id} title={content.ui.examples} photos={group.photos} /> : null}
       <PageClose />
     </>

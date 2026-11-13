@@ -92,7 +92,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           menuLabel={content.ui.menu}
           closeLabel={content.ui.close}
         />
-        <main id="inhoud" className="flex-1 pb-24 lg:pb-0">
+        <main id="inhoud" className="flex-1 pb-36 lg:pb-0">
           {children}
         </main>
         <Footer />

@@ -27,9 +27,9 @@ export default function ProjectenPage() {
       />
       <div className="mx-auto max-w-[76rem] px-5 py-14 md:px-8 md:py-16">
         <nav aria-label="Onderdelen van de galerij">
-          <ol className="grid border border-ink sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="grid gap-px bg-ink sm:grid-cols-2 lg:grid-cols-4">
             {page.groups.map((group) => (
-              <li key={group.id} className="border-b border-ink last:border-b-0 sm:border-r sm:last:border-r-0 lg:border-b-0">
+              <li key={group.id} className="bg-paper">
                 <a href={`#${group.id}`} className="block min-h-11 px-4 py-4">
                   <span className="block font-display text-3xl">{group.title}</span>
                   <span className="mt-1 block text-[1rem] leading-snug">{group.lede}</span>

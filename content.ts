@@ -294,7 +294,7 @@ export const content = {
       ontwerp: "Op maat",
       projecten: "Werk waar we trots op zijn",
       bijen: "Bevruchting",
-      stijl: "Zes stijlen",
+      stijl: "Moodboard",
       vacatures: "Diepenheim",
       contact: "Oude Sluisweg",
       offerte: "Vrijblijvend",

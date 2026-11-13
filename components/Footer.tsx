@@ -8,7 +8,7 @@ import Waterline from "@/components/Waterline";
 export default function Footer() {
   const { company, contact, footer, nav } = content;
   return (
-    <footer className="border-t border-ink bg-paper">
+    <footer className="border-t border-ink bg-paper pb-36 lg:pb-16">
       <Waterline />
       <div className="mx-auto grid max-w-[72rem] gap-10 px-5 py-14 md:px-8 lg:grid-cols-[1.2fr_1fr_1fr]">
         <div>
@@ -29,7 +29,7 @@ export default function Footer() {
           <p className="mt-2 font-mono text-[0.95rem]">{footer.kvk}</p>
         </div>
         <div>
-          <p className="font-mono text-[0.82rem] tracking-wide">CONTACT</p>
+          <p className="font-mono text-[0.95rem] tracking-wide">CONTACT</p>
           <p className="mt-3">
             <PhoneLink className="inline-link" />
           </p>
@@ -45,7 +45,7 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <p className="font-mono text-[0.82rem] tracking-wide">PAGINA’S</p>
+          <p className="font-mono text-[0.95rem] tracking-wide">PAGINA’S</p>
           <ul className="mt-3 flex flex-col gap-1.5">
             {nav.map((item) => (
               <li key={item.href}>

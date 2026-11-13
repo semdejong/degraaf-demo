@@ -28,13 +28,16 @@ export default function StijlPage() {
           {page.styles.map((style, index) => (
             <li
               key={style.name}
-              className="grid items-center gap-6 border-b border-ink py-8 md:grid-cols-[minmax(0,280px)_minmax(0,1fr)] md:gap-12"
+              className="grid items-center gap-6 border-b border-ink py-8 md:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] md:gap-12"
             >
               <div className={index % 2 === 1 ? "md:order-2" : ""}>
                 <HonestImage src={style.src} alt={style.alt} width={style.width} height={style.height} />
               </div>
               <div>
-                <p className="font-mono text-[0.95rem]">0{index + 1}</p>
+                <p className="font-mono text-[0.95rem]">
+                  <span className="mr-2 inline-block h-[3px] w-3 bg-lime align-middle" aria-hidden="true" />
+                  0{index + 1}
+                </p>
                 <h3 className="mt-2 font-display text-[clamp(2rem,4vw,3.2rem)]">{style.name}</h3>
                 <p className="mt-3 max-w-md">{style.alt}</p>
               </div>

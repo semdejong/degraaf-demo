@@ -5,6 +5,7 @@ import Blocks from "@/components/Blocks";
 import Examples from "@/components/Examples";
 import PageClose from "@/components/PageClose";
 import PageIntro from "@/components/PageIntro";
+import WithStaff from "@/components/WithStaff";
 
 const page = content.pages.bedrijven;
 const group = content.projects.groups.find((item) => item.id === "bedrijven");
@@ -25,14 +26,14 @@ export default function BedrijvenPage() {
         imageWidth={page.imageWidth}
         imageHeight={page.imageHeight}
       />
-      <div className="mx-auto max-w-[76rem] px-5 py-14 md:px-8 md:py-16">
+      <WithStaff>
         <Blocks blocks={page.blocks} />
         <p className="mt-8">
           <Link href="/overheid" className="inline-link">
             Overheid
           </Link>
         </p>
-      </div>
+      </WithStaff>
       {group ? <Examples id={group.id} title={content.ui.examples} photos={group.photos} /> : null}
       <PageClose />
     </>
